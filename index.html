@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT front end</title>
+
+    <!-- Link the CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link the JavaScript file -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <h2 class="logo">ChatGPT</h2>
+                <button id="new-chat-btn" class="new-chat-btn">
+                    + New chat
+                </button>
+            </div>
+
+            <p class="history-heading">Your conversations</p>
+            <div id="chat-history" class="chat-history"></div>
+
+            <div class="sidebar-footer">
+                <p>ChatGPT Frontend</p>
+                <p class="small-text">HTML · CSS · JavaScript</p>
+            </div>
+        </aside>
+
+        <!-- Main chat area -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <button id="menu-btn" class="menu-btn"
+                        aria-label="Toggle sidebar">
+                    ☰
+                </button>
+                <span>ChatGPT</span>
+                <span class="status">● Demo mode</span>
+            </header>
+
+            <section id="messages" class="messages">
+
+                <!-- Visible when the chat has no messages -->
+                <div id="welcome" class="welcome">
+                    <h1>What can I help you with?</h1>
+                    <p>Start a conversation below.</p>
+                </div>
+
+            </section>
+
+            <!-- Message input form -->
+            <div class="composer-area">
+                <form id="chat-form" class="chat-form">
+                    <textarea
+                        id="message-input"
+                        placeholder="Message My AI..."
+                        rows="1"
+                        aria-label="Your message"
+                        required
+                    ></textarea>
+
+                    <button type="submit" id="send-btn"
+                            aria-label="Send message">
+                        ↑
+                    </button>
+                </form>
+
+                <p class="disclaimer">
+                    This is a demo frontend. Replies are simulated.
+                </p>
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>
